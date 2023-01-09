@@ -1,0 +1,85 @@
+<div>
+    <mat-toolbar fxLayout="column"  fxLayoutAlign="space-evenly none"  fxFlex class="bg_pic">
+        <mat-toolbar-row>
+            <span class="example-spacer" fxFlex="1 1 auto">
+                <span  [hidden]="vendorLoggedIn"><button mat-button class="font" (click)="addRestro()">Add Restaurant</button></span>
+                <span  [hidden]="vendorLoggedIn"><button mat-button class="font" routerLink="/vendor">My Restaurants</button></span>
+               <span  [hidden]="!isloggedOut">  <button mat-button  class="font" routerLink="/login">Log in</button> <button mat-button  class="font" routerLink="/signup" >Sign up</button>
+               </span>
+               <span  [hidden]="adminLoggedIn"> <button mat-button  class="font" routerLink="/admin" >Dashboard</button>
+               </span>
+               <span class="prfspn"  [hidden]="isloggedOut"><a mat-button [matMenuTriggerFor]="belowMenu" ><img class="profile" src="{{profilePic}}"></a>
+                <mat-menu class="menu"  #belowMenu="matMenu" yPosition="below">
+                <button class="menu"  mat-menu-item (click)="myProfile()">My Profile</button>
+                <button class="menu" mat-menu-item (click)="orderHistory()">My Order History</button>
+                <button class="menu" mat-menu-item (click)="myFavoriteRestro()">My Favorite Restaurant</button>
+                <button class="menu" mat-menu-item (click)="logout()">Logout</button>
+            </mat-menu>
+        </span>
+            </span>
+        </mat-toolbar-row>
+        <mat-toolbar-row>
+          <button mat-button class="logofont" routerLink="">food!e</button>
+          <!-- <span  class="font"><br><pre>Discover  the  best  food  and  drinks</pre></span> -->
+        </mat-toolbar-row>
+        <mat-toolbar-row  fxHide.lt-md>
+            <span  class="desc"><br>Discover  the  best  food  and  drinks</span>
+          </mat-toolbar-row>
+        <mat-toolbar-row fxHide.lt-md>
+            <mat-form-field floatLabel="never" class="search">
+                <button mat-stroked-button  routerLink=""><mat-icon>search</mat-icon>
+                </button>
+                   <input matInput placeholder="&emsp;&emsp;&emsp;&emsp;Search your favourite Restaurant by address" #s1 (keydown.enter)="search(s1.value)" >
+            </mat-form-field>
+        </mat-toolbar-row>
+      </mat-toolbar>
+    </div>
+      <router-outlet></router-outlet>
+     <footer class="f00ter" >
+        <div class="footerlogo" fxHide.lt-md>
+            food!e
+        </div><br>
+    <hr style="width: 68%;">
+        <div style="display: inline-flex;" fxLayout.lt-md="column" fxLayout.gt-md="rows">
+            <div class="desc_gap">
+                <span class="footer_desc_heading"> ABOUT FOODIE </span><br>
+                <span><br><a href="#" class="footer_desc">who we are</a></span><br>
+                <span><br><a href="#" class="footer_desc">Blog</a></span><br>
+                <span><br><a href="#" class="footer_desc">Work with us</a></span><br>
+                <span><br><a href="#" class="footer_desc">Investror relations</a></span><br>
+            </div>
+            <div class="desc_gap" fxHide.lt-md>
+                <span class="footer_desc_heading"> FOODIEVERSE </span><br>
+                <span><br><a href="#" class="footer_desc">Foodie</a></span><br>
+                <span><br><a href="#" class="footer_desc">Blinkit</a></span><br>
+                <span><br><a href="#" class="footer_desc">Feeding India</a></span><br>
+                <span><br><a href="#" class="footer_desc">Hyperpure</a></span><br>
+                <span><br><a href="#" class="footer_desc">Foodieland</a></span><br>
+            </div>
+            <div class="desc_gap" fxHide.lt-md>
+                <span class="footer_desc_heading"> For Restaurants </span><br>
+                <span><br><a href="#" class="footer_desc">Partner With Us</a></span><br>
+                <span><br><a href="#" class="footer_desc">Apps For You</a></span><br><br><br>
+                <span class="footer_desc_heading"> For Enterprises </span><br>
+                <span><br><a href="#" class="footer_desc">Foodie For Work</a></span><br>
+            </div>
+            <div class="desc_gap">
+                <span class="footer_desc_heading"> Learn More </span><br>
+                <span><br><a href="#" class="footer_desc">Privacy</a></span><br>
+                <span><br><a href="#" class="footer_desc">Security</a></span><br>
+                <span><br><a href="#" class="footer_desc">Terms</a></span><br>
+                <span><br><a href="#" class="footer_desc">Site map</a></span><br>
+            </div>
+            <div class="desc_gap">
+                <span class="footer_desc_heading" > Social Links </span><br><br>
+                <a href="#"><img src="/assets/Facebook.png" style="width: 40px;"></a>
+                 <a href="#"><img src="/assets/Twitter.png" style="width: 40px; margin-left: 15px;"></a>
+                 <a href="#"><img src="/assets/Instagram.png" style="width: 40px; margin-left: 15px;"></a>
+                 <a href="#"><img src="/assets/Youtube.png" style="width: 40px; margin-left: 15px;"></a><br><br>
+                <a href="#"><img src="/assets/playstore.png" style="width: 130px; margin-left: 15px;"></a><br>
+                <a href="#"> <img src="/assets/playstore1.png" style="width: 130px; margin-left: 15px;"></a>
+            </div>
+        </div>
+        <hr>
+            <p class="footer_para">By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners.<br> 2008-2022 © Zomato™ Ltd. All rights reserved</p>
+        </footer>

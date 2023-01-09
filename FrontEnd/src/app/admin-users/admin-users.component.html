@@ -1,0 +1,45 @@
+<table mat-table [dataSource]="allUsers">
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+    <!-- Position Column -->
+    <ng-container matColumnDef="firstName">
+      <th mat-header-cell *matHeaderCellDef>First Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+    </ng-container>
+    <ng-container matColumnDef="lastName">
+        <th mat-header-cell *matHeaderCellDef> Last Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
+      </ng-container>
+    <!-- Name Column -->
+    <ng-container matColumnDef="emailId">
+        <th mat-header-cell *matHeaderCellDef> Email-Id </th>
+        <td mat-cell *matCellDef="let element"> {{element.emailId}} </td>
+      </ng-container>
+    <ng-container matColumnDef="address">
+      <th mat-header-cell *matHeaderCellDef> Address </th>
+      <td mat-cell *matCellDef="let element"> {{element.addressList[0].address}} </td>
+    </ng-container>
+    <!-- Weight Column -->
+    <ng-container matColumnDef="mobileNo">
+      <th mat-header-cell *matHeaderCellDef> Contact </th>
+      <td mat-cell *matCellDef="let element"> {{element.mobileNo}} </td>
+    </ng-container>
+    <ng-container matColumnDef="userName">
+        <th mat-header-cell *matHeaderCellDef> UserName </th>
+        <td mat-cell *matCellDef="let element"> {{element.userName}} </td>
+      </ng-container>
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="role">
+      <th mat-header-cell *matHeaderCellDef> Role </th>
+      <td mat-cell *matCellDef="let element"> {{element.role}} </td>
+    </ng-container>
+    <ng-container matColumnDef="password">
+        <th mat-header-cell *matHeaderCellDef> Password </th>
+        <td mat-cell *matCellDef="let element"> {{element.password}} &emsp;
+          <!-- <button style="margin-left:50px; ;" mat-raised-button color="primary" (click)="updateDialog(element)">UPDATE</button>
+            <button mat-raised-button color="warn" (click)="delete(element.id)">DELETE</button> -->
+        </td>
+      </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>

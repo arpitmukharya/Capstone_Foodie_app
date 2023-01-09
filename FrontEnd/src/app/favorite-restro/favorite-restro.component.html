@@ -1,0 +1,15 @@
+<div class="main-div">
+  <mat-card class="example-card" *ngFor="let n of favRestros">
+        <button class="btn" (click)="selectedRestro(n)" >
+          <mat-card-title class="title"><u>{{n.restroName}}</u></mat-card-title><br>
+          <mat-card-subtitle>{{n.cuisine}}</mat-card-subtitle>
+        <mat-card-content>
+          Open Time- {{n.openTime}} &nbsp;&nbsp;&nbsp;Close Time- {{n.closeTime}}
+          {{n.restroAddress}}
+        </mat-card-content>
+      </button>
+        <mat-card-content>
+          <button mat-stroked-button (click)="deleteItem(n.gstNo)"><mat-icon>delete</mat-icon></button>
+      </mat-card-content>
+      </mat-card><br>
+      </div>

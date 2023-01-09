@@ -1,0 +1,84 @@
+{
+  "Restuarant": [
+    {
+      "Name": "Haldiram's The Real Taste",
+      "Address": "M.G Road",
+      "OpenTime": "08:00",
+      "CloseTime": "19:00",
+      "ContactNumber": 9717717777,
+      "id": 1
+    },
+    {
+      "Name": "Swaad Sagar",
+      "Address": "G.E Road",
+      "OpenTime": "13:00",
+      "CloseTime": "19:00",
+      "ContactNumber": 9713718889,
+      "id": 2
+    },
+    {
+      "Name": "Healthy Bite",
+      "Address": "Cross Road",
+      "OpenTime": "08:00",
+      "CloseTime": "13:00",
+      "ContactNumber": 9713717777,
+      "id": 3
+    },
+    {
+      "Name": "Madrasi",
+      "Address": "YRB Road",
+      "OpenTime": "10:00",
+      "CloseTime": "07:00",
+      "ContactNumber": 9711111111,
+      "id": 4
+    },
+    {
+      "Name": "Little Hearts",
+      "Address": "Raipur",
+      "OpenTime": "09:00",
+      "CloseTime": "09:00",
+      "ContactNumber": 9111111111,
+      "id": 5
+    },
+    {
+      "Name": "Heavens",
+      "Address": "Shankar  Nagar",
+      "OpenTime": "08:00",
+      "CloseTime": "13:00",
+      "ContactNumber": 8877665544,
+      "id": 6
+    },
+    {
+      "Name": "New Restro",
+      "Address": "Durg",
+      "OpenTime": "09:00",
+      "CloseTime": "18:00",
+      "ContactNumber": 8811228828,
+      "id": 7
+    },
+    {
+      "Name": "Babylon inn",
+      "Address": "VIP Road",
+      "OpenTime": "08:00",
+      "CloseTime": "15:00",
+      "ContactNumber": 9998887771,
+      "id": 10
+    },
+    {
+      "Name": "Hyatt Regency",
+      "Address": "Raipur",
+      "OpenTime": "08:00",
+      "CloseTime": "01:00",
+      "ContactNumber": 9713718888,
+      "id": 11
+    },
+    {
+      "Name": "Star Buck's",
+      "Address": "Ring Road",
+      "OpenTime": "08:00",
+      "CloseTime": "20:00",
+      "ContactNumber": 9777777777,
+      "id": 12
+    }
+  ]
+}

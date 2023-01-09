@@ -1,0 +1,15 @@
+.main-div{
+    display: flex;
+    flex-wrap:wrap;
+    background-color: beige;
+}
+.example-card {
+    max-width: 250px;
+    display:inline-block;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: rgb(158, 67, 14);
+    color:white;
+  }

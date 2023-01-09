@@ -1,0 +1,71 @@
+.maindiv{
+    background-color: beige;
+    background-image: url("https://img.freepik.com/premium-vector/food-delivery_24908-48920.jpg?w=2000");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+.heading{
+    padding-top: 1%;
+    font-size: 52px;
+    font-weight: bolder;
+    font-style: italic;
+    color:rgb(158, 67, 14);
+    margin-left: 25%;
+}
+.orderid{
+    margin-top: 2%;
+    font-size: 32px;
+    font-weight: bold;
+    color:rgb(185, 90, 35);
+    margin-left: 20%;
+}
+.amount{
+    margin-top: 2%;
+    font-size: 22px;
+    font-weight: bold;
+    color:rgb(155, 58, 20);
+    margin-left: 20%;
+}
+.emailId{
+    margin-top: 2%;
+    font-size: 22px;
+    font-weight: lighter;
+    font-style: bold;
+    color:rgb(155, 58, 20);
+    margin-left: 20%;
+}
+.address{
+    margin-top: 2%;
+    font-size: 22px;
+    font-weight: lighter;
+    font-style: bold;
+    color:rgb(155, 58, 20);
+    margin-left: 20%;
+}
+.mob{
+    margin-top: 2%;
+    font-size: 22px;
+    font-weight: lighter;
+    font-style: bold;
+    color:rgb(155, 58, 20);
+    margin-left: 20%;
+}
+.matter{
+    margin-top: 2%;
+    font-size: 22px;
+    font-weight: lighter;
+    font-style: bold;
+    color:rgb(155, 58, 20);
+    margin-left: 20%;
+}
+.button1{
+    margin-left: 2%;
+    margin-top: 17%;
+}
+.button2{
+    margin-top: -2.5%;
+    margin-left: 85%;
+}

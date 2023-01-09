@@ -1,0 +1,49 @@
+<div class="maindiv">
+  <h1 class="title">Order Summary</h1>
+  <div class="cards">
+<span *ngFor="let n of orderList" >
+  <mat-card class="example-card" >
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>{{n.itemName}}</mat-card-title>
+          <mat-card-subtitle class="category">{{n.itemCategory}}</mat-card-subtitle>
+          <mat-card-subtitle class="category">Qty : {{n.quantity}}</mat-card-subtitle>
+          <mat-card-subtitle class="category">Amount : ₹{{n.price}}</mat-card-subtitle>
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content>
+          <button mat-stroked-button (click)="deleteItem(n)"><mat-icon>delete</mat-icon></button>
+      </mat-card-content>
+    </mat-card>
+  </span>
+</div>
+   <div class="coupdetails">
+    <div class="coupon">
+    <mat-select  class="dropDown" placeholder="   EXCITING COUPONS"  #c1>
+      <mat-option value="0.35">Christmas Special 35%off*</mat-option>
+      <mat-option value="0.5">Winter is back at 50%off*</mat-option>
+      </mat-select><br></div><br>
+      <button class="couponbtn" mat-raised-button color="accent" (click)="applyCoupon(c1.value)">Apply Coupon</button><br>
+      <div class="amount"><br>
+    Total Amount:₹{{totalPrice}} <br>
+    SGST(5%)+CGST(5%):{{gstAmount}} <br><br>
+    Amount To Be Paid:{{payPrice}} <br>
+  </div>
+  </div>
+  <div class="form">
+      <form class="formstyle" [formGroup]="orderDetails" (ngSubmit)="addOrder()">
+          <mat-form-field appearance="fill" >
+              <mat-label >Delivery Address</mat-label>
+              <input  matInput placeholder="address" formControlName="address">
+              <mat-hint align="end">Enter Address</mat-hint>
+          </mat-form-field><br>
+          <mat-form-field appearance="fill">
+              <mat-label>Mobile Number</mat-label>
+              <input type="number" matInput placeholder="mobileNo" formControlName="mobileNo">
+              <mat-hint align="end">Mobile Number</mat-hint>
+          </mat-form-field><br>
+          <button type="submit" [disabled]="orderDetails.invalid" mat-raised-button color="accent" >Confirm And Place Your Order</button>
+          <button mat-raised-button (click)="cancel()" color="warn">Cancel</button>
+        </form>
+      </div>
+    </div>

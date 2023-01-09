@@ -1,0 +1,20 @@
+<div>
+    <div class="chip">
+        <mat-chip-list aria-label="View Selection" style="margin:3px">
+          <a class="anchor" routerLink="adminrestaurants">
+          <mat-chip  color="primary" selected>Restaurants</mat-chip>
+        </a>
+        <a class="anchor" routerLink="adminusers">
+          <mat-chip color="primary" selected>Users</mat-chip>
+        </a>
+        <a class="anchor" routerLink="adminorders">
+          <mat-chip color="primary" selected>Orders</mat-chip>
+        </a>
+        <a class="anchor" routerLink="adminreview">
+            <mat-chip color="primary" selected>Review</mat-chip>
+          </a>
+         
+        </mat-chip-list>
+      </div>
+      <router-outlet></router-outlet>
+</div>

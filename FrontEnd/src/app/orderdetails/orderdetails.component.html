@@ -1,0 +1,23 @@
+<div  mat-dialog-content class="maindiv">
+    <h1  mat-dialog-title>Order Details</h1>
+
+    <div>
+
+        <div>
+            <div class="review">Order Id :{{orderData.orderId}}</div>
+            <div class="emailId">emailId :{{orderData.emailId}}</div>
+            <div class="emailId">Deliverd Address :{{orderData.address}}</div>
+        </div>
+        <span class="emailId">Contact No. :{{orderData.mobileNo}}</span>
+        <hr>
+        <div class="review" *ngFor="let m of orderData.itemList">
+            <pre><span>Item Name :{{m.itemName}}</span>      <span>Item Category :{{m.itemCategory}}</span>      <span>Total Price :{{m.price}}</span>      <span>Quantity :{{m.quantity}}</span></pre>
+        </div>
+       
+    </div>
+    
+
+     <div mat-dialog-actions>
+        <button mat-button mat-dialog-close>Close</button>
+ </div>
+    </div>

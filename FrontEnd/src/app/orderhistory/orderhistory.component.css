@@ -1,0 +1,18 @@
+.mainDiv{
+    background-color: beige;
+    color:rgb(39, 11, 10);
+    padding-left:32%;
+}
+table{
+    border:2px solid saddlebrown;
+}
+th{
+    font-size: 22px;
+}
+td{
+    font-weight: bold;
+   font-size: 18px
+}
+tr:hover{
+background-color: rgb(158, 67, 14);
+}

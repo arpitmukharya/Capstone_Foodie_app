@@ -1,0 +1,18 @@
+<div  mat-dialog-content class="maindiv">
+    <h1  mat-dialog-title>Review</h1>
+
+    <div *ngFor="let n of allReviews">
+
+        <div>
+            <span class="review">{{n.review}}</span>
+            <span class="star">{{n.star}}<mat-icon>star</mat-icon></span>
+        </div>
+        <span class="emailId">-{{n.userEmailId}}</span>
+        <hr>
+    </div>
+
+     <div mat-dialog-actions>
+        <button mat-button mat-dialog-close>Close</button>
+ </div>
+    </div>
+    

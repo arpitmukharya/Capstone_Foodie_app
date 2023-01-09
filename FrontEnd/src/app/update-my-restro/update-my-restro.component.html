@@ -1,0 +1,157 @@
+<div  mat-dialog-content class="maindiv">
+    <h1  mat-dialog-title>Update Restuarant</h1>
+    <h4>For Old Data</h4>
+    <button mat-raised-button >
+        <mat-icon (click)="updatebtn()">update</mat-icon>
+    </button>
+    <form (ngSubmit)="addRestro()" [formGroup]="restro" class="form-content">
+
+        <mat-form-field appearance="outline">
+            <mat-label>Restuarant Name</mat-label>
+            <input matInput placeholder="Restuarant Name" formControlName="restroName">
+            <mat-hint align="end" *ngIf="restroName.invalid">Name Is Must</mat-hint>
+        </mat-form-field><br>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Email-Id</mat-label>
+            <input matInput placeholder="Email-Id" formControlName="emailId" readonly>
+            <mat-hint align="end" *ngIf="emailId.invalid">Email-Id Is Must</mat-hint>
+        </mat-form-field><br>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Gst-No.</mat-label>
+            <input matInput placeholder="Gst-No." formControlName="gstNo" readonly>
+            <mat-hint align="end" *ngIf="emailId.invalid">Valid Gst-No. Is Must</mat-hint>
+        </mat-form-field><br>
+       
+        <mat-form-field appearance="outline">
+            <mat-label>Address</mat-label>
+            <input matInput placeholder="Restuarant Address" formControlName="restroAddress">
+            <mat-hint align="end" *ngIf="restroAddress.invalid">Address Is Must</mat-hint>
+        </mat-form-field><br>
+
+
+        <mat-form-field appearance="outline">
+            <mat-label>Cuisine</mat-label>
+            <input matInput placeholder="Cuisine" formControlName="cuisine">
+            <mat-hint align="end" *ngIf="cuisine.invalid">Cuisine Is Must</mat-hint>
+        </mat-form-field><br>
+        
+          <mat-form-field appearance="outline">
+            <mat-label>Open Time</mat-label>
+            <mat-select formControlName="openTime">
+              <mat-option value="08:00">08:00</mat-option>
+              <mat-option value="09:00">09:00</mat-option>
+              <mat-option value="10:00">10:00</mat-option>
+              <mat-option value="11:00">11:00</mat-option>
+              <mat-option value="12:00">12:00</mat-option>
+              <mat-option value="13:00">13:00</mat-option>
+              <mat-option value="14:00">14:00</mat-option>
+              <mat-option value="15:00">15:00</mat-option>
+              <mat-option value="16:00">16:00</mat-option>
+              <mat-option value="17:00">17:00</mat-option>
+              <mat-option value="18:00">18:00</mat-option>
+              <mat-option value="19:00">19:00</mat-option>
+            </mat-select>
+            <mat-hint align="end" *ngIf="openTime.invalid"> Select Opening Time</mat-hint>
+          </mat-form-field><br>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Close Time</mat-label>
+            <mat-select formControlName="closeTime">
+              <mat-option value="14:00">14:00</mat-option>
+              <mat-option value="15:00">15:00</mat-option>
+              <mat-option value="16:00">16:00</mat-option>
+              <mat-option value="17:00">17:00</mat-option>
+              <mat-option value="18:00">18:00</mat-option>
+              <mat-option value="19:00">19:00</mat-option>
+              <mat-option value="20:00">20:00</mat-option>
+              <mat-option value="21:00">21:00</mat-option>
+              <mat-option value="22:00">22:00</mat-option>
+              <mat-option value="23:00">23:00</mat-option>
+              <mat-option value="00:00">00:00</mat-option>
+              <mat-option value="01:00">01:00</mat-option>
+            </mat-select>
+            <mat-hint align="end" *ngIf="closeTime.invalid"> Select Closing Time</mat-hint>
+          </mat-form-field> <br>
+
+        
+
+        <mat-form-field appearance="outline">
+            <mat-label>Contact Number</mat-label>
+            <input matInput placeholder="ContactNumber" formControlName="restroPhone">
+            <mat-hint *ngIf="restroPhone.invalid">Please enter 10 digit number</mat-hint>
+        </mat-form-field>
+
+       
+        <div>
+       <a color="accent" (click)="addDiv()"><mat-icon>+</mat-icon></a>
+        </div>
+
+        <div class="mainDiv">
+            <table cellspacing="10px">
+            <tr>
+                <th>Item Name</th>
+                <th>Item price</th>
+            </tr>
+            <tr *ngFor="let n of allMenuItem">
+                <td>{{n.itemName}}</td>
+                <td>{{n.itemPrice}}</td>
+                <td><a (click)="deleteMenu(n.itemName)"><mat-icon>delete</mat-icon></a></td>
+            </tr>
+            </table>
+            </div>
+
+        <div [hidden]="show">
+
+          <form [formGroup]="menuList" (ngSubmit)="addItem()">
+         
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Item Name</mat-label>
+                <input matInput formControlName="itemName">
+                <mat-hint align="end" *ngIf="itemName.invalid">Item Name is Must</mat-hint>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label> Item Description</mat-label>
+              <input matInput formControlName="itemDescription">
+              <mat-hint align="end" *ngIf="itemDescription.invalid">Item Description is Must</mat-hint>
+          </mat-form-field><br>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Item Category</mat-label>
+            <mat-select formControlName="itemCategory">
+              <mat-option value="veg">veg</mat-option>
+              <mat-option value="non-veg">non-veg</mat-option>
+            </mat-select>
+            <mat-hint align="end" *ngIf="itemCategory.invalid">Item Category is Must</mat-hint>
+          </mat-form-field> <br>
+
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Item Image Url</mat-label>
+          <input matInput formControlName="itemImageUrl">
+          <mat-hint align="end" *ngIf="itemImageUrl.invalid">Item Image Url is Must</mat-hint>
+      </mat-form-field><br>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Item Price</mat-label>
+        <input type="number" matInput formControlName="itemPrice">
+        <mat-hint align="end" *ngIf="itemPrice.invalid">Item Price is Must</mat-hint>
+    </mat-form-field><br>
+           
+        <button type="submit"  mat-raised-button >Add To Menu</button>
+      </form> </div>
+      
+        <div class="pic-div"> 
+          <span class="checkbox">Choose Restaurant Picture</span><br>
+          <input type="file" (change)="onFileChanged($event)" >
+          <img [src]="imgURL" height="200" *ngIf="imgURL">
+      </div><br>
+                 <div mat-dialog-actions>
+                    <button [disabled]="restro.invalid" type="submit" mat-stroked-button >Submit</button>
+                    <button mat-button mat-dialog-close>Close</button>
+
+                 </div>
+    </form>
+    </div>
+    

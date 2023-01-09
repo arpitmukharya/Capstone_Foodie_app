@@ -1,0 +1,45 @@
+.main-div{
+  display: flex;
+  flex-wrap:wrap;
+  background-color: beige;
+ }
+ .example-card {
+   max-width: 250px;
+   display:inline-block;
+   margin-left: 20px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   border-radius: 10px;
+   background-color: rgb(158, 67, 14);
+   color:white;
+ }
+ .btn{
+  background-color: rgb(158, 67, 14);
+  color:white;
+  border-style: none;
+  border-bottom: solid white;
+ }
+ .timer{
+   position: absolute;
+   top:170px;
+   right:20px;
+   color: rgba(51, 49, 19, 0.877);
+   background-color: rgb(232, 245, 57);
+   font-weight: bold;
+   font-size: 22px;
+ }
+ .image{
+   width:282px ;
+   height:200px;
+    position: relative;
+ }
+ .img{
+   border-radius: 10px;
+ }
+ .select{
+   text-decoration: none;
+   color: white;
+ }
+ .title{
+  font-weight:bold;
+ }

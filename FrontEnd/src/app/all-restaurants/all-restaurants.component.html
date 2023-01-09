@@ -1,0 +1,16 @@
+<div class="main-div">
+    <mat-card class="example-card" *ngFor="let n of allData">
+      <a class="select" href="#" (click)="selectedRestro(n)"> <span class="img"><img mat-card-image class="image" src="{{n.picSize}}" alt="Image"></span>
+        <!-- <span class="timer">3.4<mat-icon>star</mat-icon></span> -->
+        <mat-card-title>{{n.restroName}}</mat-card-title><br>
+        <mat-card-subtitle>{{n.cuisine}}</mat-card-subtitle>
+      </a>
+      <mat-card-content>
+        Open Time- {{n.openTime}} &nbsp;&nbsp;&nbsp;Close Time- {{n.closeTime}}
+
+        {{n.restroAddress}}
+      </mat-card-content>
+    </mat-card>
+  
+    </div>
+  

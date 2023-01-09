@@ -1,0 +1,19 @@
+<div class="mainDiv">
+    <table cellspacing="10px">
+    <tr>
+        <th>Restaurant Name</th>
+        <th>Restaurant Address</th>
+        <th>Restaurant Cuisine</th>
+        <th>Restaurant Open Time</th>
+        <th>Restaurant Close Time</th>
+    </tr>
+    <tr *ngFor="let n of restaurantList">
+        <td>{{n.restroName}}</td>
+        <td>{{n.restroAddress}}</td>
+        <td>{{n.cuisine}}</td>
+        <td>{{n.openTime}}</td>
+        <td>{{n.closeTime}}</td>
+        <td><button (click)="showRestro(n.gstNo)"><mat-icon>remove_red_eye</mat-icon></button></td>
+    </tr>
+    </table>
+    </div>

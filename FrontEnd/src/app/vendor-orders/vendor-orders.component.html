@@ -1,0 +1,21 @@
+<div mat-dialog-content class="mainDiv">
+    
+    <table cellspacing="10px">
+    <tr>
+        <th>Order Id</th>
+        <th>Customer e-mailId</th>
+        <th>Delivered Address</th>
+        <th>Grand Total</th>
+    </tr>
+    <tr *ngFor="let n of allOrdersData">
+        <td>{{n.orderId}}</td>
+        <td>{{n.emailId}}</td>
+        <td>{{n.address}}</td>
+        <td>{{n.totalPrice}}</td>
+    </tr>
+    </table>
+    <div mat-dialog-actions>
+        <button mat-button mat-dialog-close>Close</button>
+
+     </div>
+    </div>

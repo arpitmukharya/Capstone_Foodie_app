@@ -1,0 +1,15 @@
+<div class="mainDiv">
+    <table cellspacing="10px">
+    <tr>
+        <th>Order Id</th>
+        <th>Delivered Address</th>
+        <th>Grand Total</th>
+    </tr>
+    <tr *ngFor="let n of allOrdersData">
+        <td>{{n.orderId}}</td>
+        <td>{{n.address}}</td>
+        <td>{{n.totalPrice}}</td>
+        <td><button (click)="showOrder(n.orderId)"><mat-icon>remove_red_eye</mat-icon></button></td>
+    </tr>
+    </table>
+    </div>

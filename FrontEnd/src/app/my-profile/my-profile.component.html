@@ -1,0 +1,71 @@
+<div mat-dialog-content class="main-div">
+    <h1 mat-dialog-title class="heading">My Profile</h1>
+        <h4>For existing details press below icon</h4>
+    <button mat-raised-button >
+        <mat-icon (click)="updatebtn()">download</mat-icon>
+    </button>
+    <form [formGroup]="commonUser" (ngSubmit)="update()" class="example-form">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>First Name</mat-label>
+            <input matInput formControlName="firstName">
+            <mat-hint align="end" *ngIf="firstName.invalid">FirstName is Must</mat-hint>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Last Name</mat-label>
+            <input matInput formControlName="lastName">
+            <mat-hint align="end" *ngIf="lastName.invalid">LastName is Must</mat-hint>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>email</mat-label>
+            <input readonly matInput formControlName="emailId">
+            <mat-hint align="end" *ngIf="emailId.invalid">E-mail is Must</mat-hint>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" formControlName="password">
+            <mat-hint align="end" *ngIf="password.invalid">password is Must</mat-hint>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>User Name</mat-label>
+            <input matInput formControlName="userName">
+            <mat-hint align="end" *ngIf="userName.invalid">User Name is Must</mat-hint>
+        </mat-form-field>
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Mobile No</mat-label>
+            <input matInput formControlName="mobileNo">
+            <mat-hint align="end" *ngIf="mobileNo.invalid">Phone No. must be of 10 digits</mat-hint>
+        </mat-form-field>
+        <div formGroupName="addressList">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>ADDRESS</mat-label>
+            <input matInput formControlName="address">
+            <mat-hint align="end" *ngIf="address.invalid">Address is Must</mat-hint>
+        </mat-form-field>
+       </div>
+       <div class="checkbox">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Role</mat-label>
+            <input readonly matInput formControlName="role">
+        </mat-form-field>
+        </div><br>
+        <div>
+            <span class="checkbox">Choose Profile Picture</span><br>
+            <input type="file" (change)="onFileChanged($event)" >
+            <img [src]="imgURL" height="200" *ngIf="imgURL">
+        </div><br>
+        <div>
+            <form [formGroup]="newAddress" (ngSubmit)="addAddress()">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Alternate Address</mat-label>
+                    <input matInput formControlName="newaddress1">
+                    <mat-hint align="end" *ngIf="newaddress1.invalid">Address is Must</mat-hint>
+                </mat-form-field>
+            <button [disabled]="newAddress.invalid" type="submit" mat-raised-button>Add Address</button>
+        </form>
+        </div>
+        <div mat-dialog-actions>
+            <button mat-raised-button color="primary" type="submit" [disabled]="commonUser.invalid">Submit</button>
+            <button mat-button mat-dialog-close>Close</button>
+         </div>
+        </form>
+    </div>

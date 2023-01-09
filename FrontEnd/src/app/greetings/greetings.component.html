@@ -1,0 +1,15 @@
+<div class="maindiv">
+   <div class="heading"><u>Order Placed!</u></div>
+   <div class="orderid">OrderID: {{finalOrderData.orderId}}</div>
+   <div class="emailId">E-mail ID: {{finalOrderData.emailId}}</div>
+   <div class="address">Address:{{finalOrderData.address}} </div>
+   <div class="mob">Mobile Number: {{finalOrderData.mobileNo}}</div>
+   <div class="amount">Amount To Be Paid: ₹{{finalOrderData.totalPrice}}</div>
+   <div class="matter">
+      Thanks for ordering food with Foodie!! <br>
+      <hr>
+      We will feed your hunger soon....
+   </div>
+   <div  class="button1" ><button mat-raised-button color="primary" (click)="home()">HOME</button></div>
+  <div  class="button2" > <button mat-raised-button  color="primary" (click)="addreview()">Add Review For Restaurant</button></div>
+</div>

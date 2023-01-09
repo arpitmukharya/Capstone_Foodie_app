@@ -1,0 +1,42 @@
+<table mat-table [dataSource]="allRestros">
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+    <!-- Position Column -->
+    <ng-container matColumnDef="gstNo">
+      <th mat-header-cell *matHeaderCellDef>Gst No.</th>
+      <td mat-cell *matCellDef="let element"> {{element.gstNo}} </td>
+    </ng-container>
+    <ng-container matColumnDef="restroName">
+        <th mat-header-cell *matHeaderCellDef> Restaurant Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.restroName}} </td>
+      </ng-container>
+    <!-- Name Column -->
+    <ng-container matColumnDef="emailId">
+        <th mat-header-cell *matHeaderCellDef> Owner E-mail Address </th>
+        <td mat-cell *matCellDef="let element"> {{element.emailId}} </td>
+      </ng-container>
+    <ng-container matColumnDef="restroAddress">
+      <th mat-header-cell *matHeaderCellDef> Restaurant Address </th>
+      <td mat-cell *matCellDef="let element"> {{element.restroAddress}} </td>
+    </ng-container>
+    <!-- Weight Column -->
+    <ng-container matColumnDef="cuisine">
+      <th mat-header-cell *matHeaderCellDef> Cuisine </th>
+      <td mat-cell *matCellDef="let element"> {{element.cuisine}} </td>
+    </ng-container>
+    <ng-container matColumnDef="openTime">
+        <th mat-header-cell *matHeaderCellDef> Open Time </th>
+        <td mat-cell *matCellDef="let element"> {{element.openTime}} </td>
+      </ng-container>
+      <ng-container matColumnDef="closeTime">
+        <th mat-header-cell *matHeaderCellDef> Close Time </th>
+        <td mat-cell *matCellDef="let element"> {{element.closeTime}} </td>
+      </ng-container>
+      <ng-container matColumnDef="restroPhone">
+        <th mat-header-cell *matHeaderCellDef> Contact No. </th>
+        <td mat-cell *matCellDef="let element"> {{element.restroPhone}} </td>
+      </ng-container>
+    
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
